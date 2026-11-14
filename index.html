@@ -1,1 +1,1412 @@
-v
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- STRAYD-GRADE SEO META DATA & AI BOT DISCOVERY TAGS -->
+    <title>Martin Strayd - Hit Song Viral Soundtracks | MP3 + Art Digital CD Singles Archive</title>
+    <meta name="description" content="Explore and collect exclusive master soundtrack editions by Martin Strayd. Each purchase delivers the ultimate digital 'CD & Cassette' experience: lossless MP3 audio plus high-resolution cover art. You own the media to share, copy, and gift to friends freely (personal use & sharing rights; no resale). Secured via instant settlement rails: PayPal, Wise THB, and MyDoge Scan to Pay." />
+    <meta name="keywords" content="Martin Strayd, music dApp, soundtrack archive, MP3 and art download, digital CD collector edition, Dogecoin payment, MyDoge scan to pay, AI agent music catalog, decentralized music streaming" />
+    <meta name="author" content="Martin Strayd, Suzuki & Kunda Co Ltd" />
+    <link rel="canonical" href="https://strayd.com/" />
+
+    <!-- Open Graph / Social / AI Bot Metadata -->
+    <meta property="og:title" content="Martin Strayd - Collector Soundtracks | MP3 + High-Res Art Digital CD" />
+    <meta property="og:description" content="Own the digital media.  MP3 master soundtracks by Martin Strayd available with digital CD Art. Share, copy, and gift to friends freely." />
+    <meta property="og:type" content="music.album" />
+    <meta property="og:url" content="https://strayd.com/" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Martin Strayd Soundtrack Vault • MP3 + Art Editions" />
+    <meta name="twitter:description" content="Collect and own true digital media. MP3 + CD Art downloads with complete personal sharing and gifting rights." />
+
+    <!-- Schema.org Structured Data for AI Crawlers & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Martin Strayd",
+      "genre": "Soundtrack, Electronic, Cinematic Rock",
+      "description": "Exclusive decentralized soundtrack catalog featuring limited edition master releases available for digital CD ownership (MP3 + High-Resolution Cover Art).",
+      "url": "https://martinstrayd.com/",
+      "sameAs": [
+        "https://www.paypal.com/paypalme/martinstrayd"
+      ],
+      "track": [
+        {
+          "@type": "MusicRecording",
+          "name": "Adhd I Can Do That (Travillen Disorder)",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Martin Strayd"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-deep: #08090e;
+            --surface: #11131c;
+            --surface-elevated: #181b28;
+            --accent-green: #a3e635;
+            --accent-green-glow: rgba(163, 230, 53, 0.16);
+            --accent-gold: #d4af37;
+            --accent-blue: #38bdf8;
+            --accent-wise: #9fe870;
+            --accent-paypal: #0070ba;
+            --accent-paypal-light: #3b9eff;
+            --accent-danger: #f87171;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #242838;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-deep); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; -webkit-tap-highlight-color: transparent; }
+
+        header {
+            background: rgba(8, 9, 14, 0.95); backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border); padding: 0.9rem 1.25rem;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 0.75rem;
+        }
+        .header-title { font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; color: var(--text-main); }
+        .header-title span { color: var(--accent-gold); }
+        .catalog-badge {
+            background: var(--surface); border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.7rem;
+            color: var(--accent-gold); font-family: monospace; letter-spacing: 0.5px;
+        }
+
+        .engagement-bar {
+            max-width: 1400px; margin: 0.85rem auto 0 auto; width: calc(100% - 2rem);
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-elevated) 100%);
+            border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 1rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;
+            font-size: 0.76rem; box-shadow: 0 4px 20px rgba(163, 230, 53, 0.06);
+            border-left: 3px solid var(--accent-green);
+        }
+        .metric-group { display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap; }
+        .metric-item { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); }
+        .metric-item strong { color: var(--accent-green); font-family: monospace; }
+
+        .vault-toast {
+            max-width: 1400px; margin: 0.6rem auto 0 auto; width: calc(100% - 2rem);
+            background: #141722; border: 1px solid var(--accent-gold); color: var(--accent-gold);
+            border-radius: 8px; padding: 0.55rem 1rem; font-size: 0.76rem; font-family: monospace;
+            display: none; justify-content: space-between; align-items: center;
+        }
+        .vault-toast.show { display: flex; }
+
+        .dashboard-banner {
+            max-width: 1400px; margin: 0.85rem auto; width: calc(100% - 2rem);
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 1rem 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem;
+        }
+        .stat-box { display: flex; flex-direction: column; }
+        .stat-label { font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 0.25rem; }
+        .stat-value { font-size: 0.95rem; font-weight: 700; color: var(--text-main); }
+
+        .market-toolbar-bar {
+            max-width: 1400px; margin: 0 auto 1rem auto; width: calc(100% - 2rem);
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;
+        }
+        .market-stats { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); align-items: center; }
+        .market-stats strong { color: var(--accent-gold); }
+        .toolbar-actions { display: flex; align-items: center; gap: 0.5rem; position: relative; flex-wrap: wrap; }
+        .tool-icon-btn {
+            background: var(--surface); border: 1px solid var(--border); color: var(--text-main);
+            height: 38px; padding: 0 0.85rem; border-radius: 8px; display: flex; align-items: center; gap: 0.4rem;
+            cursor: pointer; font-size: 0.8rem; font-weight: 700; transition: all 0.2s;
+        }
+        .tool-icon-btn:hover { border-color: var(--accent-green); background: var(--surface-elevated); }
+        .cart-pill {
+            background: var(--accent-green); color: #000; font-size: 0.7rem;
+            font-weight: 900; padding: 0.1rem 0.45rem; border-radius: 99px;
+        }
+
+        .sweep-bar {
+            background: var(--surface); border: 1px solid var(--border); padding: 0.35rem 0.75rem;
+            border-radius: 8px; display: none; align-items: center; gap: 0.5rem; font-size: 0.78rem;
+        }
+        .sweep-bar.show { display: flex; }
+        .sweep-input {
+            background: #08090c; border: 1px solid var(--border); color: var(--text-main);
+            padding: 0.2rem 0.4rem; border-radius: 4px; width: 44px; text-align: center; font-weight: 700;
+        }
+        .sweep-confirm { background: var(--accent-green); color: #000; border: none; padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 800; cursor: pointer; }
+        .sweep-mode-btn { background: var(--surface-elevated); border: 1px solid var(--border); color: var(--accent-gold); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.72rem; font-weight: 800; cursor: pointer; }
+
+        .dropdown-menu {
+            position: absolute; top: 44px; right: 0; background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; width: 235px; box-shadow: 0 12px 30px rgba(0,0,0,0.85); display: none; z-index: 50; padding: 0.4rem;
+        }
+        .dropdown-menu.show { display: block; }
+        .dropdown-item {
+            padding: 0.55rem 0.75rem; font-size: 0.78rem; color: var(--text-muted); cursor: pointer; border-radius: 6px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .dropdown-item:hover { background: var(--surface-elevated); color: var(--text-main); }
+        .dropdown-item.selected { color: var(--accent-green); font-weight: 700; }
+
+        /* STAGE 1: GALLERY INDEX */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 1rem 3rem 1rem; width: 100%; flex: 1; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 1.1rem; }
+        .card {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            overflow: hidden; display: flex; flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: pointer; position: relative;
+        }
+        .card:hover { transform: translateY(-3px); border-color: var(--accent-gold); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55); }
+        .card.selected-for-bulk { border-color: var(--accent-gold); box-shadow: 0 0 16px rgba(212, 175, 55, 0.3); }
+        .bulk-checkbox {
+            position: absolute; top: 10px; left: 10px; width: 22px; height: 22px; background: rgba(0,0,0,0.75);
+            border: 2px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center;
+            z-index: 5; color: transparent; font-weight: 900; font-size: 0.75rem; transition: all 0.2s;
+        }
+        .card.selected-for-bulk .bulk-checkbox { background: var(--accent-gold); border-color: var(--accent-gold); color: #000; }
+
+        .card-img-wrapper { position: relative; width: 100%; aspect-ratio: 1; background: #090a0f; overflow: hidden; }
+        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+        .card:hover .card-img-wrapper img { transform: scale(1.03); }
+        .badge-tag {
+            position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px);
+            color: var(--accent-gold); border: 1px solid rgba(212, 175, 55, 0.6); font-size: 0.62rem; font-weight: 800; padding: 0.18rem 0.5rem; border-radius: 4px; text-transform: uppercase;
+        }
+        .demand-pill {
+            position: absolute; bottom: 10px; left: 10px; background: rgba(8, 9, 14, 0.9);
+            color: var(--accent-green); border: 1px solid rgba(163, 230, 53, 0.4);
+            font-size: 0.65rem; font-family: monospace; font-weight: 700; padding: 0.18rem 0.5rem; border-radius: 4px;
+        }
+        .card-body { padding: 1rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+        .track-id { font-size: 0.68rem; color: var(--accent-gold); font-family: monospace; margin-bottom: 0.2rem; display: flex; justify-content: space-between; }
+        .track-title { font-size: 0.94rem; font-weight: 700; margin-bottom: 0.15rem; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .track-artist { font-size: 0.74rem; color: var(--text-muted); margin-bottom: 0.55rem; }
+
+        .preview-pill {
+            height: 34px; background: #08090e; border: 1px solid var(--border); border-radius: 6px;
+            padding: 0 0.55rem; margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.45rem; transition: border-color 0.2s, background 0.2s;
+        }
+        .preview-pill:hover { border-color: var(--accent-green); background: #0e1018; }
+        .preview-pill.is-playing { border-color: var(--accent-green); box-shadow: 0 0 8px rgba(163, 230, 53, 0.15); }
+        .preview-play-btn {
+            background: var(--surface-elevated); border: 1px solid var(--border); color: var(--accent-green);
+            width: 22px; height: 22px; border-radius: 4px; display: flex; align-items: center; justify-content: center;
+            font-size: 0.62rem; font-weight: 900; cursor: pointer; flex-shrink: 0;
+        }
+        .preview-pill.is-playing .preview-play-btn { background: var(--accent-green); color: #000; border-color: var(--accent-green); }
+        .preview-track-bar { flex: 1; height: 3px; background: #1d2130; border-radius: 2px; overflow: hidden; position: relative; }
+        .preview-track-fill { width: 0%; height: 100%; background: var(--accent-green); transition: width 0.15s linear; }
+        .preview-status-label { font-size: 0.62rem; font-family: monospace; color: var(--text-muted); white-space: nowrap; }
+        .preview-pill.is-playing .preview-status-label { color: var(--accent-green); font-weight: 700; }
+
+        .price-block { margin-bottom: 0.75rem; }
+        .price-usd { font-size: 1.08rem; color: var(--accent-wise); font-weight: 900; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+        .price-doge { font-size: 0.74rem; color: var(--text-muted); font-weight: 700; font-family: monospace; }
+
+        .card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .action-btn {
+            padding: 0.55rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800;
+            cursor: pointer; text-align: center; border: 1px solid var(--border); transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 0.3rem;
+        }
+        .add-cart-btn { background: transparent; color: var(--text-main); border-color: var(--border); }
+        .add-cart-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        .add-cart-btn.in-cart { background: rgba(212, 175, 55, 0.16); border-color: var(--accent-gold); color: var(--accent-gold); }
+        .buy-now-btn { background: var(--accent-green); color: #000; border: none; }
+        .buy-now-btn:hover { background: #bdfd54; }
+
+        /* OVERLAY BACKDROP */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(4, 5, 8, 0.92); backdrop-filter: blur(16px);
+            display: none; align-items: center; justify-content: center; z-index: 1000; padding: 1rem;
+        }
+        .modal-close {
+            position: absolute; top: 16px; right: 18px; background: #1a1d29; border: 1px solid var(--border);
+            color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.15rem; cursor: pointer; z-index: 10;
+        }
+        .modal-close:hover { color: var(--text-main); border-color: var(--text-muted); }
+
+        /* STAGE 2: EDITION SHOWCASE MODAL */
+        .showcase-modal-card {
+            background: #10121b; border: 1px solid #2b3044; border-radius: 18px;
+            max-width: 880px; width: 100%; padding: 2rem; position: relative;
+            box-shadow: 0 35px 90px rgba(0,0,0,0.9);
+            display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: center;
+            max-height: 92vh; overflow-y: auto;
+        }
+        @media(max-width: 768px) { .showcase-modal-card { grid-template-columns: 1fr; padding: 1.35rem; gap: 1.25rem; } }
+
+        .showcase-art-frame {
+            width: 100%; aspect-ratio: 1; border-radius: 14px; overflow: hidden;
+            background: radial-gradient(circle at 30% 25%, #1f2436 0%, #090a0f 75%);
+            border: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 18px 45px rgba(0,0,0,0.75);
+            position: relative; display: flex; align-items: center; justify-content: center;
+        }
+        .showcase-art-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .inspect-art-fallback {
+            display: none; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 1.25rem; gap: 0.5rem; width: 100%; height: 100%;
+            background: linear-gradient(145deg, #131622 0%, #090a0f 100%);
+        }
+
+        .fomo-banner-pill {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.14) 0%, rgba(163, 230, 53, 0.12) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 8px;
+            padding: 0.6rem 0.85rem; font-size: 0.76rem; color: var(--text-main);
+            display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+        }
+        .fomo-banner-pill strong { color: var(--accent-green); font-family: monospace; }
+
+        .showcase-price-panel {
+            background: #08090e; border: 1px solid var(--border); border-radius: 12px;
+            padding: 1rem; display: flex; flex-direction: column; gap: 0.3rem;
+        }
+
+        .showcase-btn-primary {
+            width: 100%; padding: 0.95rem 1rem; border-radius: 10px; border: none;
+            background: var(--accent-green); color: #000; font-size: 0.92rem; font-weight: 900;
+            letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            box-shadow: 0 6px 24px rgba(163, 230, 53, 0.25);
+        }
+        .showcase-btn-primary:hover { background: #bdfd54; transform: translateY(-1px); }
+
+        .showcase-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+        .showcase-btn-secondary {
+            padding: 0.72rem 0.75rem; border-radius: 8px; font-size: 0.78rem; font-weight: 800;
+            cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+            background: var(--surface-elevated); border: 1px solid var(--border); color: var(--text-main);
+        }
+        .showcase-btn-secondary:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        .showcase-btn-ghost {
+            width: 100%; padding: 0.65rem; border-radius: 8px; background: transparent;
+            border: 1px solid var(--border); color: var(--text-muted); font-size: 0.76rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .showcase-btn-ghost:hover { color: var(--text-main); border-color: #4b526e; }
+
+        /* STAGE 3: HARD-SELL SETTLEMENT PORTAL */
+        .settlement-modal-card {
+            background: #10121b; border: 1px solid #2b3044; border-radius: 18px;
+            max-width: 960px; width: 100%; padding: 1.85rem; position: relative;
+            box-shadow: 0 35px 90px rgba(0,0,0,0.92);
+            display: grid; grid-template-columns: 0.9fr 1.35fr; gap: 1.75rem; align-items: start;
+            max-height: 92vh; overflow-y: auto;
+        }
+        @media(max-width: 820px) { .settlement-modal-card { grid-template-columns: 1fr; padding: 1.25rem; } }
+
+        .checkout-items-scroll { max-height: 230px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem; margin: 0.75rem 0; padding-right: 0.2rem; }
+        .order-item-card {
+            background: #08090d; border: 1px solid var(--border); border-radius: 8px;
+            padding: 0.55rem; display: flex; align-items: center; gap: 0.65rem;
+        }
+        .order-item-meta { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .order-item-id { font-size: 0.65rem; color: var(--accent-gold); font-family: monospace; }
+        .order-item-name { font-size: 0.8rem; font-weight: 700; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .order-item-price { font-size: 0.8rem; font-weight: 800; color: var(--accent-green); font-family: monospace; }
+        .remove-cart-btn {
+            background: transparent; border: 1px solid var(--border); color: var(--text-muted);
+            width: 24px; height: 24px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; font-weight: 800;
+        }
+        .remove-cart-btn:hover { border-color: var(--accent-danger); color: var(--accent-danger); }
+
+        .totals-box { border-top: 1px solid var(--border); padding-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.82rem; }
+        .total-row { display: flex; justify-content: space-between; color: var(--text-muted); }
+        .total-row.grand { font-size: 1.05rem; font-weight: 900; color: var(--text-main); }
+        .total-row.grand span:last-child { color: var(--accent-green); font-family: monospace; }
+
+        /* BRAND LOGO TABS */
+        .brand-rail-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55rem;
+        }
+        @media(max-width: 500px) { .brand-rail-grid { grid-template-columns: 1fr; } }
+
+        .brand-rail-btn {
+            background: #08090e; border: 2px solid var(--border); border-radius: 10px;
+            padding: 0.7rem 0.5rem; cursor: pointer; transition: all 0.2s;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem;
+            text-align: center;
+        }
+        .brand-rail-btn:hover { border-color: #464d6b; background: #131624; }
+        .brand-rail-btn.active.rail-paypal { border-color: var(--accent-paypal-light); background: rgba(0, 112, 186, 0.14); }
+        .brand-rail-btn.active.rail-wise { border-color: var(--accent-wise); background: rgba(159, 232, 112, 0.12); }
+        .brand-rail-btn.active.rail-doge { border-color: var(--accent-gold); background: rgba(212, 175, 55, 0.12); }
+
+        .brand-title-row {
+            display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+            font-size: 0.92rem; font-weight: 900; letter-spacing: 0.2px;
+        }
+        .brand-sub-tag { font-size: 0.66rem; font-weight: 700; color: var(--text-muted); font-family: monospace; }
+
+        .settlement-panel {
+            background: #08090e; border: 1px solid var(--border); border-radius: 12px;
+            padding: 1.1rem; display: none; flex-direction: column; gap: 0.85rem;
+        }
+        .settlement-panel.active { display: flex; }
+
+        .qr-instruction-split { display: flex; gap: 1.1rem; align-items: center; }
+        @media(max-width: 520px) { .qr-instruction-split { flex-direction: column; text-align: center; } }
+
+        .qr-card-frame {
+            background: #fff; padding: 0.55rem; border-radius: 12px; width: 165px; height: 165px;
+            flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+        }
+        .qr-card-frame img { width: 100%; height: 100%; object-fit: contain; }
+
+        .clean-steps-box {
+            background: #111420; border: 1px solid #262b40; border-radius: 10px;
+            padding: 0.8rem 0.9rem; display: flex; flex-direction: column; gap: 0.45rem;
+            text-align: left; flex: 1;
+        }
+        .clean-step-line {
+            display: block; font-size: 0.76rem; color: var(--text-main); line-height: 1.45;
+        }
+        .clean-step-line strong { color: var(--accent-blue); font-weight: 800; }
+        .clean-step-line .gold-hl { color: var(--accent-gold); font-weight: 800; }
+        .clean-step-line .green-hl { color: var(--accent-wise); font-weight: 800; }
+
+        .wallet-copy-pill {
+            background: #0c0e16; border: 1px dashed rgba(212, 175, 55, 0.5); padding: 0.5rem 0.65rem;
+            border-radius: 6px; font-family: monospace; font-size: 0.68rem; color: var(--accent-gold);
+            word-break: break-all; cursor: pointer; text-align: left;
+        }
+        .wallet-copy-pill:hover { border-color: var(--accent-gold); background: #141826; }
+
+        .brand-cta-btn {
+            width: 100%; padding: 0.8rem; border-radius: 8px; border: none;
+            font-size: 0.84rem; font-weight: 900; cursor: pointer; text-align: center;
+            text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+            transition: all 0.2s;
+        }
+        .cta-paypal { background: var(--accent-paypal); color: #fff; }
+        .cta-paypal:hover { background: #005ea6; }
+        .cta-wise { background: var(--accent-wise); color: #000; }
+        .cta-wise:hover { background: #b2f280; }
+        .cta-verify { background: var(--accent-green); color: #000; font-size: 0.88rem; }
+        .cta-verify:hover { background: #bdfd54; }
+
+        .status-banner { font-size: 0.76rem; font-weight: 700; text-align: center; color: var(--accent-gold); min-height: 1.1rem; }
+        .unlocked-downloads {
+            display: none; flex-direction: column; gap: 0.4rem;
+            background: rgba(163, 230, 53, 0.08); border: 1px solid var(--accent-green);
+            padding: 0.75rem; border-radius: 8px; max-height: 170px; overflow-y: auto;
+        }
+        .dl-link {
+            background: var(--accent-green); color: #000; text-decoration: none;
+            padding: 0.5rem 0.7rem; border-radius: 6px; font-size: 0.74rem; font-weight: 800;
+            display: flex; justify-content: space-between; align-items: center; gap: 0.4rem;
+        }
+        .dl-link:hover { background: #bdfd54; }
+
+        footer {
+            background: rgba(8, 9, 14, 0.95); border-top: 1px solid var(--border);
+            padding: 1.5rem 1.25rem; font-size: 0.8rem; color: var(--text-muted);
+            margin-top: auto; display: flex; flex-direction: column; gap: 1rem;
+        }
+        .footer-content-box {
+            max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; text-align: left;
+        }
+        .footer-col h4 { font-size: 0.85rem; color: var(--accent-gold); margin-bottom: 0.4rem; font-weight: 800; letter-spacing: 0.5px; }
+        .footer-col p { font-size: 0.76rem; line-height: 1.5; color: var(--text-muted); }
+        .footer-bottom-bar {
+            border-top: 1px solid var(--border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.75rem;
+        }
+        footer a { color: var(--accent-gold); text-decoration: none; font-weight: 700; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">STRAYD <span>SOUNDTRACK</span> <span id="live-local-timestamp">Nov 14, 2026 - 1:58 PM</span></div>
+        <div class="header-right">
+            <div class="catalog-badge">COLLECTOR VAULT • MP3 ARCHIVE</div>
+        </div>
+    </header>
+
+    <div class="engagement-bar">
+        <div class="metric-group">
+            <div class="metric-item">🔥 Vault Status: <strong style="color: var(--accent-green);">LIVE &amp; VERIFIED</strong></div>
+            <div class="metric-item">👥 Collectors Active: <strong style="color: var(--accent-gold);"><span id="live-peers-count">27</span> Browsing Editions</strong></div>
+            <div class="metric-item">📈 Bonding Curve: <strong>+$0.10 USD / Sale</strong></div>
+        </div>
+        <div class="metric-item">
+            ⚡ Payment: <strong style="color: var(--accent-paypal-light);">PayPal</strong> • <strong style="color: var(--accent-wise);">Wise  THB</strong> • <strong style="color: var(--accent-gold);">Dogecoin QR</strong>
+        </div>
+    </div>
+
+    <div id="vault-toast" class="vault-toast">
+        <span id="vault-toast-msg"></span>
+        <button onclick="hideVaultToast()" style="background:none;border:none;color:var(--accent-gold);font-weight:900;cursor:pointer;">✕</button>
+    </div>
+
+    <div class="dashboard-banner">
+        <div class="stat-box">
+            <span class="stat-label">Limited Edition Floor</span>
+            <span class="stat-value" style="color: var(--accent-gold);">$5.99 USD (~200 THB Wise)</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Demand Bonding Curve</span>
+            <span class="stat-value" style="color: var(--accent-green);">+$0.10 USD / Sale (Per Track)</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Verified Revenue Collector</span>
+            <span class="stat-value" style="color: var(--accent-wise);">Wise Pay 🇹🇭 (Fixed 200 Baht)</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Catalog Releases</span>
+            <span class="stat-value" id="inv-count">Limited Editions</span>
+        </div>
+    </div>
+
+    <div class="market-toolbar-bar">
+        <div class="market-stats">
+            <span>Catalog Items: <strong id="listing-count">74</strong></span>
+            <span>Unlocked in Vault: <strong id="unlocked-player-count" style="color: var(--accent-green);">0</strong></span>
+        </div>
+        <div class="toolbar-actions">
+            <div id="sweep-bar" class="sweep-bar">
+                <button id="sweep-mode-toggle" class="sweep-mode-btn" onclick="toggleSweepMode()">Lowest Price ▾</button>
+                <span>Qty:</span>
+                <input type="number" id="sweep-input" class="sweep-input" value="3" min="1" max="25" oninput="updateSweepButtonLabel()">
+                <button id="sweep-action-btn" class="sweep-confirm" onclick="executeSweep()">Sweep</button>
+            </div>
+            <button class="tool-icon-btn" onclick="toggleSweepBar()">🧹 Sweep</button>
+
+            <button class="tool-icon-btn" onclick="openSettlementPortal('cart')" aria-label="cart">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Cart <span id="cart-badge" class="cart-pill">0</span>
+            </button>
+
+            <div style="position: relative;">
+                <button class="tool-icon-btn" id="filter-btn" onclick="toggleSortDropdown()">⚙️ Sort</button>
+                <div id="sort-dropdown" class="dropdown-menu">
+                    <div class="dropdown-item selected" onclick="setSortMode('price-low', this)">Price: Lowest first ($5.99+) <span>✓</span></div>
+                    <div class="dropdown-item" onclick="setSortMode('price-high', this)">Price: Highest demand first</div>
+                    <div class="dropdown-item" onclick="setSortMode('recent', this)">Recently vaulted</div>
+                    <div class="dropdown-item" onclick="setSortMode('id', this)">Catalog ID: 001 – 100</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAGE 1: GALLERY INDEX -->
+    <div class="container">
+        <div class="grid" id="store-grid"></div>
+    </div>
+
+    <!-- REWRITTEN FOOTER HIGHLIGHTING MP3 + ART OWNERSHIP & SHARING RIGHTS -->
+    <footer>
+        <div class="footer-content-box">
+            <div class="footer-col">
+                <h4>🎵 True Digital Ownership (MP3 + Art)</h4>
+                <p>When you acquire an edition from the Martin Strayd archive, you are purchasing the digital equivalent of a Master CD or Cassette. Every unlock includes pristine <strong>MP3 audio + high-resolution cover art</strong>. You fully own your media to enjoy, archive, copy, and gift to friends as you please.</p>
+            </div>
+            <div class="footer-col">
+                <h4>🤝 Sharing &amp; Collector Rights</h4>
+                <p>Your media is yours to use and share freely within your personal community and peer network. The only limitations are commercial resale or monetization. Support independent soundtrack art and AI agent curation directly.</p>
+            </div>
+            <div class="footer-col">
+                <h4>⚡ Audited Settlement &amp; AI Discovery</h4>
+                <p>Optimized for AI search agents and music enthusiasts. Secured via PayPal, Wise (200 THB Baht), and MyDoge Scan-to-Pay BIP-21 URI architecture. Contact: <a href="mailto:martinstrayd@gmail.com">martinstrayd@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom-bar" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div>MARTIN STRAYD SOUNDTRACK • EXCLUSIVE EDITIONS</div>
+            <div>DEVELOPED BY KUNDA CO LTD &amp; BLOCKCHAINSIAM</div>
+        </div>
+    </footer>
+
+    <!-- STAGE 2: EDITION SHOWCASE MODAL -->
+    <div id="showcase-overlay" class="modal-overlay" onclick="closeShowcaseOutside(event)">
+        <div class="showcase-modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeShowcase()">&times;</button>
+
+            <!-- LEFT: LARGE ARTWORK + 30s STREAM PREVIEW -->
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div class="showcase-art-frame">
+                    <img id="showcase-img-el" src="" alt="Release Cover Art" onerror="handleShowcaseArtError()">
+                    <div id="showcase-art-fallback" class="inspect-art-fallback">
+                        <div style="font-family: monospace; font-size: 0.72rem; color: var(--accent-gold); letter-spacing: 1.5px;">MARTIN STRAYD • RARE 1ST ISSUE</div>
+                        <div id="showcase-fallback-id" style="font-family: monospace; font-size: 1.2rem; font-weight: 900; color: var(--accent-green);"></div>
+                        <div id="showcase-fallback-title" style="font-size: 1rem; font-weight: 800; color: var(--text-main); line-height: 1.3;"></div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">MP3 + ART DIGITAL CD ARCHIVE</div>
+                    </div>
+                </div>
+
+                <div id="inspect-preview-pill" class="preview-pill" style="margin-bottom: 0; height: 38px;" onclick="togglePreviewStream(currentlyInspectedTrack?.id, event)">
+                    <button id="inspect-preview-btn" class="preview-play-btn" type="button">▶</button>
+                    <div class="preview-track-bar">
+                        <div id="inspect-preview-fill" class="preview-track-fill"></div>
+                    </div>
+                    <span id="inspect-preview-label" class="preview-status-label">30s STREAM PREVIEW</span>
+                </div>
+            </div>
+
+            <!-- RIGHT: BASIC INFO, ENGAGEMENT PUSH & CLEAR ACTION HIERARCHY -->
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                <div>
+                    <div id="showcase-id-el" style="font-family: monospace; color: var(--accent-gold); font-size: 0.78rem; font-weight: 800; margin-bottom: 0.25rem;"></div>
+                    <div id="showcase-title-el" style="font-size: 1.45rem; font-weight: 900; color: var(--text-main); line-height: 1.2; margin-bottom: 0.3rem;"></div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">Artist: <strong style="color: var(--text-main);">Martin Strayd</strong> • <span style="color: var(--accent-green);">Includes MP3 Audio + Cover Art ZIP</span></div>
+                </div>
+
+                <!-- ENGAGEMENT & SCARCITY PUSH -->
+                <div class="fomo-banner-pill">
+                    <span>👀 <strong id="showcase-viewers-count">16</strong> collectors viewing now</span>
+                    <span>🔥 <strong id="showcase-minted-count">4</strong> claimed today</span>
+                </div>
+
+                <!-- VALUATION PANEL -->
+                <div class="showcase-price-panel">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.8px;">Digital CD Edition Ownership</span>
+                        <span id="showcase-next-price" style="font-size: 0.7rem; font-family: monospace; color: var(--accent-gold);">Next buyer pays: $6.27</span>
+                    </div>
+                    <div id="showcase-price-usd" style="font-size: 1.65rem; font-weight: 900; color: var(--accent-wise); font-family: monospace;">$6.17 USD</div>
+                    <div id="showcase-price-sub" style="font-size: 0.74rem; color: var(--text-muted); font-family: monospace;">≈ 94.68 DOGE • Or Fixed 200 THB via Wise 🇹🇭 (Includes MP3 + Art + Sharing Rights)</div>
+                </div>
+
+                <!-- PRIMARY ACTION -->
+                <button class="showcase-btn-primary" onclick="buyNowFromShowcase()">
+                    ⚡ BUY NOW - INSTANT MP3 + ART UNLOCK
+                </button>
+
+                <!-- SECONDARY ROW -->
+                <div class="showcase-btn-row">
+                    <button id="showcase-add-cart-btn" class="showcase-btn-secondary" onclick="toggleCartFromShowcase()" style="border-color: rgba(212, 175, 55, 0.5); color: var(--accent-gold);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        <span id="showcase-add-cart-text">ADD TO CART</span>
+                    </button>
+                    <button class="showcase-btn-secondary" onclick="showCartFromShowcase()">
+                        SHOW CART (<span id="showcase-cart-count">0</span>)
+                    </button>
+                </div>
+
+                <!-- KEEP SHOPPING -->
+                <button class="showcase-btn-ghost" onclick="closeShowcase()">
+                    ← KEEP SHOPPING IN GALLERY
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAGE 3: HARD-SELL SETTLEMENT PORTAL -->
+    <div id="settlement-overlay" class="modal-overlay" onclick="closeSettlementOutside(event)">
+        <div class="settlement-modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeSettlement()">&times;</button>
+
+            <!-- LEFT COLUMN: ORDER SUMMARY -->
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="settlement-heading" style="font-size: 1rem; font-weight: 900; color: var(--text-main);">⚡ Express Edition Checkout</span>
+                    <button id="settlement-clear-btn" onclick="clearCart()" style="display:none; background:none; border:1px solid var(--border); color:var(--text-muted); padding:0.2rem 0.55rem; border-radius:6px; font-size:0.68rem; font-weight:700; cursor:pointer;">CLEAR CART</button>
+                </div>
+
+                <div class="fomo-banner-pill" style="padding: 0.5rem 0.7rem; font-size: 0.72rem;">
+                    <span>🔒 Price locked for <strong>09:59</strong></span>
+                    <span>📦 MP3 Audio + Art Archive</span>
+                </div>
+
+                <div class="checkout-items-scroll" id="settlement-items-list"></div>
+
+                <div class="totals-box">
+                    <div class="total-row"><span>Editions Queued:</span> <strong id="summary-count" style="color: var(--accent-gold);">1</strong></div>
+                    <div class="total-row"><span>Thai Baht Option (Wise 🇹🇭):</span> <strong id="summary-thb" style="color: var(--accent-wise); font-family: monospace;">200.00 THB</strong></div>
+                    <div class="total-row"><span>Dogecoin Option:</span> <strong id="summary-doge" style="color: var(--accent-blue); font-family: monospace;">94.68 DOGE</strong></div>
+                    <div class="total-row grand"><span>TOTAL (incl. 3% Tax):</span> <span id="summary-total">$6.17 USD</span></div>
+                </div>
+
+                <button class="showcase-btn-ghost" onclick="closeSettlement()" style="margin-top: 0.35rem;">
+                    ← BACK TO GALLERY
+                </button>
+            </div>
+
+            <!-- RIGHT COLUMN: BRAND RAILS -->
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; border-left: 1px solid var(--border); padding-left: 1.5rem;">
+                <div>
+                    <div style="font-size: 0.82rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.15rem;">Choose Payment Method:</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted);">Instant MP3 Audio + High-Res Art ZIP unlock immediately after verification.</div>
+                </div>
+
+                <div class="brand-rail-grid">
+                    <!-- 1. PAYPAL -->
+                    <button type="button" class="brand-rail-btn rail-paypal active" onclick="switchSettlementRail('paypal', this)">
+                        <div class="brand-title-row" style="color: #3b9eff;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#3b9eff"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106z"/></svg>
+                            <span>PayPal</span>
+                        </div>
+                        <span class="brand-sub-tag" id="tab-usd-tag">$6.17 USD</span>
+                    </button>
+
+                    <!-- 2. WISE + THAI FLAG -->
+                    <button type="button" class="brand-rail-btn rail-wise" onclick="switchSettlementRail('wise', this)">
+                        <div class="brand-title-row" style="color: var(--accent-wise);">
+                            <svg width="20" height="14" viewBox="0 0 30 20" style="border-radius: 2px; flex-shrink: 0;">
+                                <rect width="30" height="20" fill="#A51931"/>
+                                <rect y="3.33" width="30" height="13.34" fill="#F4F5F8"/>
+                                <rect y="6.67" width="30" height="6.66" fill="#2D2A4A"/>
+                            </svg>
+                            <span>Wise</span>
+                        </div>
+                        <span class="brand-sub-tag" style="color: var(--accent-wise);">200 THB BAHT</span>
+                    </button>
+
+                    <!-- 3. SCAN TO PAY DOGE -->
+                    <button type="button" class="brand-rail-btn rail-doge" onclick="switchSettlementRail('doge', this)">
+                        <div class="brand-title-row" style="color: var(--accent-gold);">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4af37"><circle cx="12" cy="12" r="10" fill="none" stroke="#d4af37" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#d4af37">Ð</text></svg>
+                            <span>Dogecoin</span>
+                        </div>
+                        <span class="brand-sub-tag" id="tab-doge-tag">Scan to Pay</span>
+                    </button>
+                </div>
+
+                <!-- PANEL 1: PAYPAL -->
+                <div id="panel-paypal" class="settlement-panel active">
+                    <div class="qr-instruction-split">
+                        <div class="qr-card-frame">
+                            <img id="settlement-paypal-qr" src="" alt="PayPal QR">
+                        </div>
+                        <div class="clean-steps-box">
+                            <div class="clean-step-line">1. Tap <strong>Pay with PayPal</strong> below or scan the QR code with your phone camera.</div>
+                            <div class="clean-step-line">2. Amount <span class="gold-hl" id="pp-amount-inline">$6.17 USD</span> is automatically pre-filled.</div>
+                            <div class="clean-step-line">3. Complete payment and click <strong>Verify &amp; Unlock MP3 + Art</strong> below.</div>
+                        </div>
+                    </div>
+                    <a id="settlement-paypal-link" href="https://www.paypal.com/paypalme/martinstrayd" target="_blank" rel="noopener noreferrer" class="brand-cta-btn cta-paypal">
+                        PAY WITH PAYPAL NOW (<span id="pp-btn-amount">$6.17 USD</span>) ↗
+                    </a>
+                    <button class="brand-cta-btn cta-verify" onclick="verifyAndUnlockSettlement('PayPal')">
+                        ✓ I HAVE PAID VIA PAYPAL - UNLOCK MP3 + ART ZIP
+                    </button>
+                </div>
+
+                <!-- PANEL 2: WISE + THAI FLAG -->
+                <div id="panel-wise" class="settlement-panel">
+                    <div class="qr-instruction-split">
+                        <div class="qr-card-frame">
+                            <img id="settlement-wise-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fwise.com%2Fpay%2Fr%2FxGmJi9kSdap4lKo" alt="Wise QR">
+                        </div>
+                        <div class="clean-steps-box">
+                            <div class="clean-step-line">1. Tap <strong>Pay via Wise 🇹🇭</strong> or scan the QR code for Thai Baht transfer.</div>
+                            <div class="clean-step-line">2. Collector flat rate is <span class="green-hl">200.00 THB (Thai Baht)</span>.</div>
+                            <div class="clean-step-line">3. Send payment and click <strong>Verify &amp; Unlock MP3 + Art</strong> below.</div>
+                        </div>
+                    </div>
+                    <a href="https://wise.com/pay/r/xGmJi9kSdap4lKo" target="_blank" rel="noopener noreferrer" class="brand-cta-btn cta-wise">
+                        🇹🇭 PAY 200 THB VIA WISE NOW ↗
+                    </a>
+                    <button class="brand-cta-btn cta-verify" onclick="verifyAndUnlockSettlement('Wise THB')">
+                        ✓ I HAVE PAID 200 THB VIA WISE - UNLOCK MP3 + ART ZIP
+                    </button>
+                </div>
+
+                <!-- PANEL 3: SCAN TO PAY DOGE -->
+                <div id="panel-doge" class="settlement-panel">
+                    <div class="qr-instruction-split">
+                        <div class="qr-card-frame">
+                            <img id="settlement-doge-qr" src="" alt="Dogecoin Scan to Pay QR">
+                        </div>
+                        <div class="clean-steps-box">
+                            <div class="clean-step-line">1. Open your <strong>mydoge.com</strong> app (soon our new app).</div>
+                            <div class="clean-step-line">2. Tap the <strong>Scan</strong> icon inside your wallet app[cite: 1].</div>
+                            <div class="clean-step-line">3. Point your camera at this QR code to <strong>Scan to Pay</strong> <span class="gold-hl" id="doge-amount-inline">94.68 DOGE</span> instantly[cite: 1].</div>
+                        </div>
+                    </div>
+                    <div class="wallet-copy-pill" onclick="copyAddress(this)" title="Click to copy Dogecoin address">
+                        Wallet Address (Click to Copy): DTzt4UaiB5EVguujuZrBbcMFSivmBg2pYG
+                    </div>
+                    <button class="brand-cta-btn cta-verify" onclick="verifyAndUnlockSettlement('Dogecoin')">
+                        ✓ I HAVE SENT DOGE - UNLOCK MP3 + ART ZIP
+                    </button>
+                </div>
+
+                <div id="settlement-status" class="status-banner">Awaiting payment confirmation...</div>
+                <div id="settlement-downloads-box" class="unlocked-downloads"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const VAULT_WALLET = "DTzt4UaiB5EVguujuZrBbcMFSivmBg2pYG";
+        const PAYPAL_ME_USERNAME = "martinstrayd";
+        const BASE_FLOOR_USD = 5.99;
+        const PRICE_STEP_USD = 0.10;
+        const DOGE_USD_RATE = 0.06517;
+        const STORAGE_SALES_KEY = "strayd_vault_edition_sales_v1";
+        const STORAGE_UNLOCKED_KEY = "strayd_vault_unlocked_tracks_v1";
+        const STORAGE_CART_KEY = "strayd_vault_cart_ids_v1";
+
+        let globalSerialCounter = 1242;
+        let sweepModeIsRandom = false;
+        let currentSort = 'price-low';
+        let currentlyInspectedTrack = null;
+        let settlementMode = 'single';
+        let settlementItems = [];
+
+        const previewAudio = new Audio();
+        previewAudio.preload = "none";
+        let activePreviewTrackId = null;
+        const previewUrlCache = {};
+
+        function updateLocalHeaderClock() {
+            const el = document.getElementById('live-local-timestamp');
+            if (!el) return;
+            try {
+                const now = new Date();
+                const datePart = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const timePart = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+                el.innerText = `${datePart} - ${timePart}`;
+            } catch (e) {}
+        }
+
+        function stopActivePreview() {
+            try {
+                previewAudio.pause();
+                previewAudio.currentTime = 0;
+            } catch (e) {}
+            if (activePreviewTrackId) {
+                syncPreviewPillUI(activePreviewTrackId, false, 0, "30s PREVIEW");
+            }
+            activePreviewTrackId = null;
+        }
+
+        function syncPreviewPillUI(trackId, isPlaying, progressPct, statusText) {
+            const cardPill = document.getElementById(`preview-pill-${trackId}`);
+            const cardBtn = document.getElementById(`preview-btn-${trackId}`);
+            const cardFill = document.getElementById(`preview-fill-${trackId}`);
+            const cardLabel = document.getElementById(`preview-label-${trackId}`);
+
+            if (cardPill) cardPill.classList.toggle('is-playing', isPlaying);
+            if (cardBtn) cardBtn.innerText = isPlaying ? "■" : "▶";
+            if (cardFill) cardFill.style.width = `${progressPct}%`;
+            if (cardLabel && statusText) cardLabel.innerText = statusText;
+
+            if (currentlyInspectedTrack && currentlyInspectedTrack.id === trackId) {
+                const insPill = document.getElementById('inspect-preview-pill');
+                const insBtn = document.getElementById('inspect-preview-btn');
+                const insFill = document.getElementById('inspect-preview-fill');
+                const insLabel = document.getElementById('inspect-preview-label');
+
+                if (insPill) insPill.classList.toggle('is-playing', isPlaying);
+                if (insBtn) insBtn.innerText = isPlaying ? "■" : "▶";
+                if (insFill) insFill.style.width = `${progressPct}%`;
+                if (insLabel && statusText) insLabel.innerText = statusText;
+            }
+        }
+
+        async function resolveLicensedPreviewUrl(track) {
+            if (track.preview) return track.preview;
+            if (previewUrlCache[track.id]) return previewUrlCache[track.id];
+            
+            const cleanTitle = track.title.replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+            const query = encodeURIComponent(`Martin Strayd ${cleanTitle}`);
+            const endpoint = `https://itunes.apple.com/search?term=${query}&media=music&entity=song&limit=10`;
+            
+            const res = await fetch(endpoint);
+            if (!res.ok) throw new Error("Network unavailable");
+            const data = await res.json();
+            
+            const results = data.results || [];
+            let match = results.find(r => {
+                const rArtist = (r.artistName || "").toLowerCase();
+                const rTrack = (r.trackName || "").toLowerCase();
+                return rArtist.includes("strayd") && rTrack.includes(cleanTitle.split(' ')[0].toLowerCase());
+            });
+            if (!match && results.length > 0) match = results[0];
+            
+            if (!match || !match.previewUrl) throw new Error("Stream unavailable");
+            previewUrlCache[track.id] = match.previewUrl;
+            return match.previewUrl;
+        }
+
+        async function togglePreviewStream(trackId, event) {
+            if (event) event.stopPropagation();
+            if (!trackId) return;
+
+            if (activePreviewTrackId === trackId && !previewAudio.paused) {
+                stopActivePreview();
+                return;
+            }
+
+            stopActivePreview();
+            const track = catalogTracks.find(t => t.id === trackId);
+            if (!track) return;
+
+            activePreviewTrackId = trackId;
+            syncPreviewPillUI(trackId, true, 12, "FETCHING STREAM...");
+
+            try {
+                const streamUrl = await resolveLicensedPreviewUrl(track);
+                if (activePreviewTrackId !== trackId) return;
+                previewAudio.src = streamUrl;
+                await previewAudio.play();
+                syncPreviewPillUI(trackId, true, 0, "PLAYING 30s");
+            } catch (err) {
+                if (activePreviewTrackId === trackId) {
+                    syncPreviewPillUI(trackId, false, 0, navigator.onLine ? "STREAM INDEXING" : "OFFLINE • WEB STREAM");
+                    activePreviewTrackId = null;
+                }
+            }
+        }
+
+        previewAudio.addEventListener('timeupdate', () => {
+            if (!activePreviewTrackId || !previewAudio.duration) return;
+            const pct = Math.min(100, (previewAudio.currentTime / previewAudio.duration) * 100);
+            const secsLeft = Math.max(0, Math.ceil(previewAudio.duration - previewAudio.currentTime));
+            syncPreviewPillUI(activePreviewTrackId, true, pct, `0:${secsLeft < 10 ? '0' : ''}${secsLeft}`);
+        });
+
+        previewAudio.addEventListener('ended', () => {
+            stopActivePreview();
+        });
+
+        function safeGetStorage(key, fallback) {
+            try {
+                const raw = localStorage.getItem(key);
+                return raw ? JSON.parse(raw) : fallback;
+            } catch (e) {
+                return fallback;
+            }
+        }
+
+        function safeSetStorage(key, value) {
+            try {
+                localStorage.setItem(key, JSON.stringify(value));
+            } catch (e) {}
+        }
+
+        let trackSalesMap = safeGetStorage(STORAGE_SALES_KEY, {});
+        window.straydVaultUnlocked = safeGetStorage(STORAGE_UNLOCKED_KEY, []);
+        let cartIds = new Set(safeGetStorage(STORAGE_CART_KEY, []));
+
+        const rawTrackTitles = [
+            "Adhd I Can Do That (Travillen Disorder)", "Always Hard (Backstage Knee Pads)", "Andaman Escape", 
+            "Angelic Gorilla (Fantasy Mix)", "Bad Habits (I Found Nun)", "Bloody Mary (Cool Hot Hot Shots)", 
+            "Christmas Song (Yadda Ho Ho)", "Click Bait Love Story (Internet Culture Club MIX)", "Danny Penniman (Reward Offered)", 
+            "Debbie Diamond (Dudeist)", "Debbie Diamond (Succeed)", "Dejavu (Crazy)", "Devils Goin Public (Beelzebub)", 
+            "Down Under (Australian Land)", "Everybody Knows (It's Illegal)", "Factory Blues (Regency)", 
+            "Factory Work (Night Shift)", "Fall into the Circle (High School)", "Favorite Home (Hyatt)", 
+            "Fool for a Good Time (Good to Be Alive)", "Forgot (About You)", "Four People on a Bike (Acoustic Guitar)", 
+            "Golden Shore (Krabi)", "Great Escape (Hotel Rock)", "Happy Endings (Buy a Ticket)", 
+            "Have You Heard the One About (Bank Job)", "Hell Aint a Bad Place", "Hit Song Tonight (Good Line Good Hook)", 
+            "How Old Were You", "How to Write Hit Songs (On My Deck)", "I Can Do That (Didgeridoo)", 
+            "I Had a Good Time (Welcome)", "Invisible Censorship (Ai Agent Predicts New President)", "Japanese Holiday (Rock Roll)", 
+            "Jewish Girls Yadda Yadda & Yada (Meshuggeneh)", "Just a Cut (Healing)", "Mary Had a Little (Bloody Virgin Mary)", 
+            "Mile High Club (Guest Pass)", "Modern May Day (Stand Up)", "Morning Rain (Aussie True Blue)", 
+            "Move It (Crazy)", "Move It for the Lady", "No Romance in France (Eiffel Tower Twins)", 
+            "Old School Rock Star (Over 55)", "Once Upon a Rock (Make Believe)", "Once Upon a Time", 
+            "One Two Threesome (Club Dominance MIX)", "Paradise (Thailand)", "Queen Meets King (Queen of Click Bait Free Drink)", 
+            "Queen Meets Millionaire (Monopoly Money)", "Queen of Clickbait (I Made My First Million Dollars)", "Really They Called Me Crazy", 
+            "Scan Qr Pre Payment (Modern Love Ritual MIX)", "Sex Education (Bangkok Crazy)", "Sex with Everyone (Crazy Bitch)", 
+            "Sex with Everyone (Sex Sex Sex)", "Smile High Club Mix (Free Ride)", "The End (Addiction)", 
+            "They Called Me Crazy (Blues Version)", "Threesome Secrets (Ménage À Trois MIX)", "Tropical Island (Monkey)", 
+            "Tropical Island", "Tuk Tuk Secret Spice (Muay Thailand)", "Two Best Friends", "Untimely Overdose", 
+            "Vegan Millionaire (Cool Hot Sauce)", "Vegan Millionaire (Crypto)", "Who Killed Fun (Pay the Rent)", 
+            "Wonderful Day (Everyday)", "X Rated Algorithm (Drunken Disco Money)", "You Know Me (Sunset Blues)", 
+            "You Know What (Blues Version)", "Young and Dumb (Search Engine)", "Zulu Dancers Like Me (You're Too Much)"
+        ];
+
+        const catalogTracks = rawTrackTitles.map((title, index) => {
+            const numStr = String(index + 1).padStart(3, '0');
+            const id = `STRAYD-ID-${numStr}`;
+            return {
+                "id": id,
+                "title": title,
+                "img": `./store-art/Martin Strayd - ${title}.png`,
+                "zip": `./buyer-zips/Martin Strayd - ${title}.zip`,
+                "preview": null,
+                "time": index + 1
+            };
+        });
+
+        function showVaultToast(message) {
+            const toast = document.getElementById('vault-toast');
+            const msgEl = document.getElementById('vault-toast-msg');
+            if (!toast || !msgEl) return;
+            msgEl.innerText = message;
+            toast.classList.add('show');
+        }
+
+        function hideVaultToast() {
+            document.getElementById('vault-toast')?.classList.remove('show');
+        }
+
+        function persistCart() {
+            safeSetStorage(STORAGE_CART_KEY, Array.from(cartIds));
+        }
+
+        function getTrackPricing(trackId) {
+            const soldCount = trackSalesMap[trackId] || 0;
+            const baseUsd = +(BASE_FLOOR_USD + (soldCount * PRICE_STEP_USD)).toFixed(2);
+            const totalUsdWithTax = +(baseUsd * 1.03).toFixed(2);
+            const doge = +(totalUsdWithTax / DOGE_USD_RATE).toFixed(2);
+            const nextUsd = +((baseUsd + PRICE_STEP_USD) * 1.03).toFixed(2);
+            return { soldCount, editionNum: soldCount + 1, usd: totalUsdWithTax, baseUsd, doge, nextUsd };
+        }
+
+        function recordTrackSale(track) {
+            const currentSold = trackSalesMap[track.id] || 0;
+            trackSalesMap[track.id] = currentSold + 1;
+            safeSetStorage(STORAGE_SALES_KEY, trackSalesMap);
+
+            if (!window.straydVaultUnlocked.some(t => t.id === track.id)) {
+                window.straydVaultUnlocked.push({
+                    id: track.id,
+                    title: track.title,
+                    img: track.img,
+                    zip: track.zip,
+                    unlockedAt: Date.now()
+                });
+                safeSetStorage(STORAGE_UNLOCKED_KEY, window.straydVaultUnlocked);
+            }
+            updateUnlockedPlayerBadge();
+        }
+
+        function updateUnlockedPlayerBadge() {
+            const el = document.getElementById('unlocked-player-count');
+            if (el) el.innerText = window.straydVaultUnlocked.length;
+        }
+
+        function getSortedCatalog() {
+            let sorted = [...catalogTracks];
+            if (currentSort === 'price-low') sorted.sort((a, b) => getTrackPricing(a.id).usd - getTrackPricing(b.id).usd);
+            if (currentSort === 'price-high') sorted.sort((a, b) => getTrackPricing(b.id).usd - getTrackPricing(a.id).usd);
+            if (currentSort === 'recent') sorted.sort((a, b) => b.time - a.time);
+            if (currentSort === 'id') sorted.sort((a, b) => a.id.localeCompare(b.id));
+            return sorted;
+        }
+
+        function handleCardArtError(imgEl, trackId) {
+            if (!imgEl) return;
+            imgEl.style.display = 'none';
+            const wrapper = imgEl.parentElement;
+            if (wrapper && !wrapper.querySelector('.card-art-fallback')) {
+                const fb = document.createElement('div');
+                fb.className = 'card-art-fallback';
+                fb.style.cssText = 'width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#151826,#090a0f);padding:1rem;text-align:center;';
+                fb.innerHTML = `<div style="font-family:monospace;font-size:0.7rem;color:var(--accent-gold);">MARTIN STRAYD</div><div style="font-family:monospace;font-size:1rem;font-weight:900;color:var(--accent-green);margin-top:0.25rem;">${trackId}</div>`;
+                wrapper.insertBefore(fb, wrapper.firstChild);
+            }
+        }
+
+        /* RENDER STAGE 1: GALLERY INDEX */
+        function renderStore() {
+            const grid = document.getElementById('store-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            let sorted = getSortedCatalog();
+            const listingCount = document.getElementById('listing-count');
+            const invCount = document.getElementById('inv-count');
+            if (listingCount) listingCount.innerText = sorted.length;
+            if (invCount) invCount.innerText = `${sorted.length} Limited Editions`;
+
+            sorted.forEach(track => {
+                const isSelected = cartIds.has(track.id);
+                const pricing = getTrackPricing(track.id);
+                const isOwned = window.straydVaultUnlocked.some(t => t.id === track.id);
+                const isPlayingThis = activePreviewTrackId === track.id && !previewAudio.paused;
+
+                const card = document.createElement('div');
+                card.className = `card ${isSelected ? 'selected-for-bulk' : ''}`;
+                card.onclick = () => openShowcaseModal(track);
+
+                card.innerHTML = `
+                    <div class="bulk-checkbox">✓</div>
+                    <div class="card-img-wrapper">
+                        <img src="${track.img}" alt="${track.title}" loading="lazy" onerror="handleCardArtError(this, '${track.id}')">
+                        <div class="badge-tag">${pricing.soldCount > 0 ? `HIGH DEMAND • ED #${pricing.editionNum}` : 'LIMITED ED #1'}</div>
+                        <div class="demand-pill">${isOwned ? '▶ UNLOCKED IN VAULT' : `Next Sale: $${pricing.nextUsd.toFixed(2)}`}</div>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="track-id">
+                                <span>${track.id}</span>
+                                <span>${pricing.soldCount} Sold</span>
+                            </div>
+                            <div class="track-title" title="${track.title}">${track.title}</div>
+                            <div class="track-artist">Martin Strayd • MP3 + Art Archive</div>
+
+                            <div id="preview-pill-${track.id}" class="preview-pill ${isPlayingThis ? 'is-playing' : ''}" onclick="togglePreviewStream('${track.id}', event)">
+                                <button id="preview-btn-${track.id}" class="preview-play-btn" type="button">${isPlayingThis ? '■' : '▶'}</button>
+                                <div class="preview-track-bar">
+                                    <div id="preview-fill-${track.id}" class="preview-track-fill"></div>
+                                </div>
+                                <span id="preview-label-${track.id}" class="preview-status-label">${isPlayingThis ? 'PLAYING 30s' : '30s PREVIEW'}</span>
+                            </div>
+
+                            <div class="price-block">
+                                <div class="price-usd">$${pricing.usd.toFixed(2)} USD</div>
+                                <div class="price-doge">${pricing.doge.toFixed(2)} DOGE • 200฿ Wise</div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn add-cart-btn ${isSelected ? 'in-cart' : ''}" onclick="event.stopPropagation(); toggleCartSelection('${track.id}')">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                                ${isSelected ? 'IN CART ✓' : 'CART'}
+                            </button>
+                            <button class="action-btn buy-now-btn" onclick="event.stopPropagation(); buySingleDirect('${track.id}')">
+                                BUY NOW
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            updateCartBadge();
+            updateSweepButtonLabel();
+            syncShowcaseCartState();
+        }
+
+        /* STAGE 2: EDITION SHOWCASE MODAL */
+        function handleShowcaseArtError() {
+            const imgEl = document.getElementById('showcase-img-el');
+            const fbEl = document.getElementById('showcase-art-fallback');
+            if (imgEl) imgEl.style.display = 'none';
+            if (fbEl) fbEl.style.display = 'flex';
+        }
+
+        function openShowcaseModal(track) {
+            if (!track) return;
+            currentlyInspectedTrack = track;
+
+            const imgEl = document.getElementById('showcase-img-el');
+            const fbEl = document.getElementById('showcase-art-fallback');
+            if (fbEl) fbEl.style.display = 'none';
+            if (imgEl) {
+                imgEl.style.display = 'block';
+                imgEl.src = track.img;
+            }
+
+            document.getElementById('showcase-fallback-id').innerText = track.id;
+            document.getElementById('showcase-fallback-title').innerText = track.title;
+
+            const isPlayingThis = activePreviewTrackId === track.id && !previewAudio.paused;
+            syncPreviewPillUI(track.id, isPlayingThis, 0, isPlayingThis ? "PLAYING 30s" : "30s STREAM PREVIEW");
+
+            const pricing = getTrackPricing(track.id);
+            document.getElementById('showcase-id-el').innerText = `${track.id} • EDITION #${pricing.editionNum}`;
+            document.getElementById('showcase-title-el').innerText = track.title;
+            document.getElementById('showcase-price-usd').innerText = `$${pricing.usd.toFixed(2)} USD`;
+            document.getElementById('showcase-price-sub').innerText = `≈ ${pricing.doge.toFixed(2)} DOGE • Or Fixed 200 THB via Wise 🇹🇭 (Includes MP3 + Art + Sharing Rights)`;
+            document.getElementById('showcase-next-price').innerText = `Next buyer pays: $${pricing.nextUsd.toFixed(2)}`;
+
+            const hashNum = parseInt(track.id.replace('STRAYD-ID-', ''), 10) || 1;
+            document.getElementById('showcase-viewers-count').innerText = 11 + (hashNum % 9);
+            document.getElementById('showcase-minted-count').innerText = (trackSalesMap[track.id] || 0) + 1 + (hashNum % 4);
+
+            syncShowcaseCartState();
+            document.getElementById('showcase-overlay').style.display = 'flex';
+        }
+
+        function syncShowcaseCartState() {
+            const countEl = document.getElementById('showcase-cart-count');
+            if (countEl) countEl.innerText = cartIds.size;
+
+            if (!currentlyInspectedTrack) return;
+            const btn = document.getElementById('showcase-add-cart-btn');
+            const txt = document.getElementById('showcase-add-cart-text');
+            if (!btn || !txt) return;
+
+            if (cartIds.has(currentlyInspectedTrack.id)) {
+                txt.innerText = "IN CART ✓";
+                btn.style.background = "rgba(212, 175, 55, 0.18)";
+            } else {
+                txt.innerText = "ADD TO CART";
+                btn.style.background = "var(--surface-elevated)";
+            }
+        }
+
+        function toggleCartFromShowcase() {
+            if (!currentlyInspectedTrack) return;
+            toggleCartSelection(currentlyInspectedTrack.id);
+        }
+
+        function showCartFromShowcase() {
+            if (currentlyInspectedTrack && !cartIds.has(currentlyInspectedTrack.id)) {
+                cartIds.add(currentlyInspectedTrack.id);
+                persistCart();
+                renderStore();
+            }
+            closeShowcase();
+            openSettlementPortal('cart');
+        }
+
+        function buyNowFromShowcase() {
+            if (!currentlyInspectedTrack) return;
+            closeShowcase();
+            openSettlementPortal('single', currentlyInspectedTrack);
+        }
+
+        function closeShowcase() {
+            document.getElementById('showcase-overlay').style.display = 'none';
+        }
+
+        function closeShowcaseOutside(e) {
+            if (e && e.target && e.target.id === 'showcase-overlay') closeShowcase();
+        }
+
+        /* STAGE 3: HARD-SELL SETTLEMENT PORTAL */
+        function buySingleDirect(id) {
+            const track = catalogTracks.find(t => t.id === id);
+            if (track) openSettlementPortal('single', track);
+        }
+
+        function openSettlementPortal(mode, singleTrack = null) {
+            settlementMode = mode;
+            const clearBtn = document.getElementById('settlement-clear-btn');
+            const headingEl = document.getElementById('settlement-heading');
+
+            if (mode === 'single' && singleTrack) {
+                settlementItems = [singleTrack];
+                if (clearBtn) clearBtn.style.display = 'none';
+                if (headingEl) headingEl.innerText = "⚡ Instant Edition Settlement";
+            } else {
+                if (cartIds.size === 0) {
+                    showVaultToast("Your Cart is empty - tap 'CART' on any release or use Sweep.");
+                    return;
+                }
+                settlementItems = Array.from(cartIds).map(id => catalogTracks.find(t => t.id === id)).filter(Boolean);
+                if (clearBtn) clearBtn.style.display = 'inline-block';
+                if (headingEl) headingEl.innerText = "🛒 Batch Cart Settlement";
+            }
+
+            const listEl = document.getElementById('settlement-items-list');
+            listEl.innerHTML = '';
+            let subtotalUsd = 0;
+
+            settlementItems.forEach(item => {
+                const pricing = getTrackPricing(item.id);
+                subtotalUsd += pricing.usd;
+                listEl.innerHTML += `
+                    <div class="order-item-card">
+                        <img src="${item.img}" alt="${item.title}" style="width:40px;height:40px;border-radius:6px;object-fit:cover;background:#151826;" onerror="this.style.visibility='hidden'">
+                        <div class="order-item-meta">
+                            <div class="order-item-id">${item.id} • ED #${pricing.editionNum}</div>
+                            <div class="order-item-name" title="${item.title}">${item.title}</div>
+                        </div>
+                        <div class="order-item-price">$${pricing.usd.toFixed(2)}</div>
+                        ${mode === 'cart' ? `<button class="remove-cart-btn" onclick="removeFromCart('${item.id}')" title="Remove">✕</button>` : ''}
+                    </div>
+                `;
+            });
+
+            const totalUsd = +subtotalUsd.toFixed(2);
+            const totalDoge = +(totalUsd / DOGE_USD_RATE).toFixed(2);
+
+            document.getElementById('summary-count').innerText = settlementItems.length;
+            document.getElementById('summary-doge').innerText = `${totalDoge.toFixed(2)} DOGE`;
+            document.getElementById('summary-total').innerText = `$${totalUsd.toFixed(2)} USD`;
+
+            // Update PayPal Rail
+            const paypalUrl = `https://www.paypal.com/paypalme/${PAYPAL_ME_USERNAME}/${totalUsd.toFixed(2)}USD`;
+            document.getElementById('tab-usd-tag').innerText = `$${totalUsd.toFixed(2)} USD`;
+            document.getElementById('pp-amount-inline').innerText = `$${totalUsd.toFixed(2)} USD`;
+            document.getElementById('pp-btn-amount').innerText = `$${totalUsd.toFixed(2)} USD`;
+            document.getElementById('settlement-paypal-link').href = paypalUrl;
+            document.getElementById('settlement-paypal-qr').src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(paypalUrl)}`;
+
+            // Update Dogecoin Scan to Pay Rail (BIP-21 URI payload)[cite: 1]
+            const dogeUri = `dogecoin:${VAULT_WALLET}?amount=${totalDoge.toFixed(2)}`;
+            document.getElementById('tab-doge-tag').innerText = `${totalDoge.toFixed(2)} DOGE`;
+            document.getElementById('doge-amount-inline').innerText = `${totalDoge.toFixed(2)} DOGE`;
+            document.getElementById('settlement-doge-qr').src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(dogeUri)}`;
+
+            // Reset Status & Downloads
+            const statusEl = document.getElementById('settlement-status');
+            statusEl.innerText = "Awaiting payment confirmation...";
+            statusEl.style.color = "var(--accent-gold)";
+
+            const dlBox = document.getElementById('settlement-downloads-box');
+            dlBox.style.display = 'none';
+            dlBox.innerHTML = '';
+
+            document.getElementById('settlement-overlay').style.display = 'flex';
+        }
+
+        function switchSettlementRail(railName, btnEl) {
+            document.querySelectorAll('.brand-rail-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.settlement-panel').forEach(p => p.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            const panel = document.getElementById(`panel-${railName}`);
+            if (panel) panel.classList.add('active');
+        }
+
+        function verifyAndUnlockSettlement(methodLabel) {
+            if (!settlementItems.length) return;
+            const statusEl = document.getElementById('settlement-status');
+            const dlBox = document.getElementById('settlement-downloads-box');
+
+            globalSerialCounter++;
+            statusEl.innerText = `✓ ${methodLabel} Settlement Verified - Serial #${globalSerialCounter} Unlocked! MP3 + Art ready.`;
+            statusEl.style.color = "var(--accent-green)";
+
+            dlBox.innerHTML = '';
+            settlementItems.forEach(item => {
+                recordTrackSale(item);
+                dlBox.innerHTML += `
+                    <a href="${item.zip}" class="dl-link" download>
+                        <span>⬇ [Serial #${globalSerialCounter}] ${item.id} - ${item.title} (MP3 + Art).zip</span>
+                        <span>DOWNLOAD MP3 + ART</span>
+                    </a>
+                `;
+            });
+            dlBox.style.display = 'flex';
+
+            if (settlementMode === 'cart') {
+                cartIds.clear();
+                persistCart();
+            }
+            renderStore();
+        }
+
+        function closeSettlement() {
+            document.getElementById('settlement-overlay').style.display = 'none';
+        }
+
+        function closeSettlementOutside(e) {
+            if (e && e.target && e.target.id === 'settlement-overlay') closeSettlement();
+        }
+
+        /* CART & SWEEP HELPERS */
+        function toggleCartSelection(id) {
+            if (cartIds.has(id)) cartIds.delete(id);
+            else cartIds.add(id);
+            persistCart();
+            renderStore();
+        }
+
+        function removeFromCart(id) {
+            cartIds.delete(id);
+            persistCart();
+            renderStore();
+            if (cartIds.size === 0) {
+                closeSettlement();
+                showVaultToast("Cart is now empty.");
+            } else {
+                openSettlementPortal('cart');
+            }
+        }
+
+        function clearCart() {
+            cartIds.clear();
+            persistCart();
+            renderStore();
+            closeSettlement();
+            showVaultToast("Cart cleared.");
+        }
+
+        function updateCartBadge() {
+            const badge = document.getElementById('cart-badge');
+            if (badge) badge.innerText = cartIds.size;
+        }
+
+        function toggleSweepBar() {
+            const bar = document.getElementById('sweep-bar');
+            if (bar) bar.classList.toggle('show');
+        }
+
+        function toggleSweepMode() {
+            sweepModeIsRandom = !sweepModeIsRandom;
+            const btn = document.getElementById('sweep-mode-toggle');
+            if (btn) {
+                btn.innerText = sweepModeIsRandom ? "Mystery 🎲" : "Lowest Price ▾";
+                btn.style.color = sweepModeIsRandom ? "var(--accent-green)" : "var(--accent-gold)";
+            }
+            updateSweepButtonLabel();
+        }
+
+        function updateSweepButtonLabel() {
+            const countInput = document.getElementById('sweep-input');
+            const btn = document.getElementById('sweep-action-btn');
+            if (!countInput || !btn) return;
+            const qty = parseInt(countInput.value, 10) || 1;
+            let pool = getSortedCatalog();
+            let sumUsd = 0;
+            for (let i = 0; i < Math.min(qty, pool.length); i++) sumUsd += getTrackPricing(pool[i].id).usd;
+            btn.innerText = `Sweep ($${sumUsd.toFixed(2)})`;
+        }
+
+        function executeSweep() {
+            const input = document.getElementById('sweep-input');
+            const count = input ? (parseInt(input.value, 10) || 1) : 1;
+            let pool = getSortedCatalog().filter(t => !cartIds.has(t.id));
+            if (sweepModeIsRandom) {
+                for (let i = pool.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [pool[i], pool[j]] = [pool[j], pool[i]];
+                }
+            }
+            pool.slice(0, Math.min(count, pool.length)).forEach(t => cartIds.add(t.id));
+            persistCart();
+            renderStore();
+            openSettlementPortal('cart');
+        }
+
+        function toggleSortDropdown() {
+            const dropdown = document.getElementById('sort-dropdown');
+            if (dropdown) dropdown.classList.toggle('show');
+        }
+
+        function setSortMode(mode, el) {
+            currentSort = mode;
+            document.querySelectorAll('.dropdown-item').forEach(i => {
+                i.classList.remove('selected');
+                i.querySelector('span')?.remove();
+            });
+            if (el) {
+                el.classList.add('selected');
+                el.innerHTML += ' <span>✓</span>';
+            }
+            const dropdown = document.getElementById('sort-dropdown');
+            if (dropdown) dropdown.classList.remove('show');
+            renderStore();
+        }
+
+        function copyAddress(triggerEl) {
+            const textToCopy = VAULT_WALLET;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showVaultToast(`Copied Dogecoin address: ${textToCopy}`);
+                }).catch(() => fallbackCopyText(textToCopy));
+            } else {
+                fallbackCopyText(textToCopy);
+            }
+        }
+
+        function fallbackCopyText(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e) {}
+            document.body.removeChild(ta);
+            showVaultToast(`Copied Dogecoin address: ${text}`);
+        }
+
+        window.addEventListener('click', function(e) {
+            if (!e.target.closest('#filter-btn') && !e.target.closest('#sort-dropdown')) {
+                const dropdown = document.getElementById('sort-dropdown');
+                if (dropdown) dropdown.classList.remove('show');
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateLocalHeaderClock();
+            setInterval(updateLocalHeaderClock, 30000);
+            updateUnlockedPlayerBadge();
+            renderStore();
+        });
+    </script>
+</body>
+</html>
